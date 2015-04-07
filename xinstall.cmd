@@ -6,5 +6,7 @@ if not exist %CYGWIN_SETUP_FILE% powershell -Command "(New-Object Net.WebClient)
 
 %CYGWIN_SETUP_FILE% --site %MIRROR_URL% --no-admin --root %CYGWIN_ROOT_DIR% --packages xorg-server,xinit,xlaunch,openssh --no-shortcuts --upgrade-also --quiet-mode
 
-%CYGWIN_ROOT_DIR%\bin\xlaunch.exe
+copy %~dp0\xlaunch.cmd %CYGWIN_ROOT_DIR%\bin\
+
+%CYGWIN_ROOT_DIR%\bin\xlaunch.cmd
 
